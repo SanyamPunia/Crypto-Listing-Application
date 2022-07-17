@@ -32,4 +32,5 @@ $ npm run dev
 * Using `getServerSideProps` (in `slug` route) & `getStaticProps` (in `/` route) methods provided by [Next.js](https://nextjs.org/), asynchronous calls to the endpoint are being made for better efficiency of the website.
 * Coin Name & Coin ID are being passed to screen 2 (`slug` route) via props in components.
 * Screen 1 lists only 10 coins per page, and pagination (`components/Pagination.js`) is implemented.
-* A simple search bar for filtering only those Coins per page. 
+* A simple search bar for filtering only those Coins per page.
+* Responsive design along with Dark/Light theme toggle (provided by `Tailwind CSS` and `next-themes`)
