@@ -1,34 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 💲 Crypto Listing Application
 
-## Getting Started
+---
 
-First, run the development server:
+![image](https://user-images.githubusercontent.com/35108041/179427661-42059060-9b15-4787-9bb0-ae517f681bfb.png)
 
-```bash
-npm run dev
-# or
-yarn dev
+---
+
+## 🔧 Tech Stack
+  * [Next.js](https://nextjs.org/) - Frontend Framework
+  * [Tailwind CSS](https://tailwindcss.com/) - Utility CSS Framework
+
+### 🔩 Sub Dependencies
+  * [Chart.js](https://www.chartjs.org/) - Charting Tool
+  * [Next-Thems](https://next-themes-example.vercel.app/) - Dark Theme
+  * [Heroicons](https://heroicons.com/) - Icon Library
+  
+---
+
+## 🔬 How to reproduce?
+Clone the repo and run locally
+```js
+$ npm install
+$ npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 📚 Overview and Structure
+* This project consists of two screens, first one displaying multiple crypto coin data fetched from a certain `json` endpoint, while the other screen displays the line graph between `coin value` and `datetime` of a coin along with `coinID` which is being passed from screen 1 to screen 2.
+* `[slug].js` is used to create dynamic routes for displaying Line Chart and different Coin IDs based upon user selection.
+* Using `getServerSideProps` (in `slug` route) & `getStaticProps` (in `/` route) methods provided by [Next.js](https://nextjs.org/), asynchronous calls to the endpoint are being made for better efficiency of the website.
+* Coin Name & Coin ID are being passed to screen 2 (`slug` route) via props in components.
+* Screen 1 lists only 10 coins per page, and pagination (`components/Pagination.js`) is implemented.
+* A simple search bar for filtering only those Coins per page. 
