@@ -1,5 +1,7 @@
 # 💲 Crypto Listing Application
 
+[Live Demo](https://crypto-listing-application.vercel.app/)
+
 ---
 
 ![image](https://user-images.githubusercontent.com/35108041/179427661-42059060-9b15-4787-9bb0-ae517f681bfb.png)
